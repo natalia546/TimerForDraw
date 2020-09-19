@@ -7,3 +7,13 @@ D:\Мои проекты\AlarmTimer\AlarmTimer\obj\Debug\AlarmTimer.csproj.Gener
 D:\Мои проекты\AlarmTimer\AlarmTimer\obj\Debug\AlarmTimer.csproj.CoreCompileInputs.cache
 D:\Мои проекты\AlarmTimer\AlarmTimer\obj\Debug\AlarmTimer.exe
 D:\Мои проекты\AlarmTimer\AlarmTimer\obj\Debug\AlarmTimer.pdb
+D:\Мои проекты\GitHubRepositiry\TimerForDraw\AlarmTimer\AlarmTimer\bin\Debug\AlarmTimer.exe.config
+D:\Мои проекты\GitHubRepositiry\TimerForDraw\AlarmTimer\AlarmTimer\bin\Debug\AlarmTimer.exe
+D:\Мои проекты\GitHubRepositiry\TimerForDraw\AlarmTimer\AlarmTimer\bin\Debug\AlarmTimer.pdb
+D:\Мои проекты\GitHubRepositiry\TimerForDraw\AlarmTimer\AlarmTimer\obj\Debug\AlarmTimer.csprojAssemblyReference.cache
+D:\Мои проекты\GitHubRepositiry\TimerForDraw\AlarmTimer\AlarmTimer\obj\Debug\AlarmTimer.Form1.resources
+D:\Мои проекты\GitHubRepositiry\TimerForDraw\AlarmTimer\AlarmTimer\obj\Debug\AlarmTimer.Properties.Resources.resources
+D:\Мои проекты\GitHubRepositiry\TimerForDraw\AlarmTimer\AlarmTimer\obj\Debug\AlarmTimer.csproj.GenerateResource.cache
+D:\Мои проекты\GitHubRepositiry\TimerForDraw\AlarmTimer\AlarmTimer\obj\Debug\AlarmTimer.csproj.CoreCompileInputs.cache
+D:\Мои проекты\GitHubRepositiry\TimerForDraw\AlarmTimer\AlarmTimer\obj\Debug\AlarmTimer.exe
+D:\Мои проекты\GitHubRepositiry\TimerForDraw\AlarmTimer\AlarmTimer\obj\Debug\AlarmTimer.pdb

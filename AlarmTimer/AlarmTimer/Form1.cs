@@ -14,7 +14,7 @@ namespace AlarmTimer
     public partial class Form1 : Form
     {
         Timer timer01 = new Timer();
-            SoundPlayer sp = new SoundPlayer(@"D:\Мои проекты\AlarmTimer\alarm.wav");
+            SoundPlayer sp = new SoundPlayer(@"D:\Мои проекты\GitHubRepositiry\TimerForDraw\AlarmTimer\alarm.wav");
             bool b = false;
         public Form1()
         {
@@ -30,13 +30,16 @@ namespace AlarmTimer
             timer01.Start();
         }
 
-       
 
+        string TimerTime;
+        DateTime TimeStart;
         private void button1_Click(object sender, EventArgs e)
         {
             if (b == false)
             {
-                label2.Text = maskedTextBox1.Text;
+                label2.Text = "00:00";
+                TimerTime= maskedTextBox1.Text;
+                TimeStart = DateTime.Now;
                 timer2.Start();
                 maskedTextBox1.Visible = false;
                 button1.Text = "Убрать будильник";
@@ -55,7 +58,7 @@ namespace AlarmTimer
         private void timer2_Tick(object sender, EventArgs e)
         {
 
-            if (label1.Text == label2.Text + ":00")
+            if (TimerTime == label2.Text)
             {
                 button2.Enabled = true;
                 sp.Play();
@@ -68,6 +71,8 @@ namespace AlarmTimer
            
                 label1.Text = DateTime.Now.Hour.ToString("00") + ":" +
                     DateTime.Now.Minute.ToString("00") + ":" + DateTime.Now.Second.ToString("00");
+            var t = (DateTime.Now - TimeStart);
+            label2.Text =t.Minutes.ToString("00") + ":" + t.Seconds.ToString("00"); ;
             
         }
 
