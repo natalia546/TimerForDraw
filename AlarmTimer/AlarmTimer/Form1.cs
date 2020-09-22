@@ -14,8 +14,9 @@ namespace AlarmTimer
     public partial class Form1 : Form
     {
         Timer timer01 = new Timer();
-            SoundPlayer sp = new SoundPlayer(@"D:\Мои проекты\GitHubRepositiry\TimerForDraw\AlarmTimer\alarm.wav");
-            bool b = false;
+        SoundPlayer sp0 = new SoundPlayer(Properties.Resources.alarm0);//(@"D:\Мои проекты\GitHubRepositiry\TimerForDraw\AlarmTimer\alarm0.wav");
+        SoundPlayer sp1 = new SoundPlayer(Properties.Resources.alarm1); //(@"D:\Мои проекты\GitHubRepositiry\TimerForDraw\AlarmTimer\alarm1.wav");
+        bool b = false;
         public Form1()
         {
             InitializeComponent();
@@ -36,7 +37,7 @@ namespace AlarmTimer
             {
                 label2.Text = maskedTextBox1.Text;
                
-                tMin = Convert.ToInt32(maskedTextBox1.Text.Substring(0, 1));
+                tMin = Convert.ToInt32(maskedTextBox1.Text.Substring(0, 2));
                 tSec = Convert.ToInt32(maskedTextBox1.Text.Substring(3));
                 
                 maskedTextBox1.Visible = false;
@@ -59,7 +60,7 @@ namespace AlarmTimer
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (tSec > -1)
+            if (tSec > 0)
             {
                 tSec--;
             }
@@ -73,15 +74,22 @@ namespace AlarmTimer
                 
             }
             label2.Text = tMin.ToString("00") + ":" +tSec.ToString("00");
-            if(tSec==0&&tMin==0)
+            if (tMin == 0)
             {
-                timer01.Stop();
-                timer01.Tick -= timer1_Tick;
-                sp.Play();
-                label2.Text = "00:00";
-                maskedTextBox1.Visible = true;
-                button1.Text = "Завести будильник";
-                b = false;
+                if(tSec==10||tSec==5 )
+                {
+                    sp1.Play();
+                }
+                if (tSec == 0)
+                {
+                    timer01.Stop();
+                    timer01.Tick -= timer1_Tick;
+                    sp0.Play();
+                    label2.Text = "00:00";
+                    maskedTextBox1.Visible = true;
+                    button1.Text = "Завести будильник";
+                    b = false;
+                }
             }
         }
 
