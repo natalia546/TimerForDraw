@@ -20,7 +20,19 @@ namespace AlarmTimer
         public Form1()
         {
             InitializeComponent();
-            
+            System.Drawing.Drawing2D.GraphicsPath Form_Path = new System.Drawing.Drawing2D.GraphicsPath();
+              Form_Path.AddEllipse(45, 90, 150,150);
+             Form_Path.AddEllipse(16, 80, 50, 50);
+             Form_Path.AddEllipse(176, 80, 50, 50);
+               Region Form_Region = new Region(Form_Path);
+              this.Region = Form_Region;
+
+            System.Drawing.Drawing2D.GraphicsPath Button_Path = new System.Drawing.Drawing2D.GraphicsPath();
+
+            Button_Path.AddEllipse(2, 2, 52, 52);
+            Region Button_Region = new Region(Button_Path);
+            this.button2.Region = Button_Region;
+            button2.BackColor = Color.Red;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -39,7 +51,8 @@ namespace AlarmTimer
                
                 tMin = Convert.ToInt32(maskedTextBox1.Text.Substring(0, 2));
                 tSec = Convert.ToInt32(maskedTextBox1.Text.Substring(3));
-                
+                tMin = tMin > 59 ? 59 :tMin;
+                tSec = tSec > 59 ? 59 : tSec;
                 maskedTextBox1.Visible = false;
                 button1.Text = "Убрать будильник";
                 b = true;
@@ -93,5 +106,9 @@ namespace AlarmTimer
             }
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
